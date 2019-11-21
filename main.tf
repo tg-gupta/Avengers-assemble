@@ -1,16 +1,14 @@
 # calling variables from samyak
-variable "story"
-{ 
+variable "story"{ 
     type = string
-    default = " Inifinity Stones "
+    value = "\n I am inevitable, I am Iron Man \n"
 
 }
-module "avengers"
-{
+module "avengers"{
     source = "github.com/samyakgupta/silver-broccoli"
 #    result = var.story
 }
 
-output "story" {
-  value = module.result.value + {/n"I am inevitable, I am Iron Man"/n}
+output "story_new" {
+  value = "${module.result.value} ${val.story}"
 }
