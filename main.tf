@@ -6,9 +6,8 @@ variable "story"{
 }
 module "avengers"{
     source = "github.com/samyakgupta/silver-broccoli"
-#    result = var.story
 }
 
 output "story_new" {
-  value = "${module.result.value} ${val.story}"
+  value = "${module.avengers.samyak_msg} ${val.story}"
 }
