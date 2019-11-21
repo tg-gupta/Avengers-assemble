@@ -1,0 +1,54 @@
+pipeline {
+      agent any
+   stage('Clone') {
+pipeline{
+  agent any
+  stages {
+   stage('Clone') 
+   {  
+       steps {
+    sh 'rm -rf *' 
+    sh 'mkdir fluffy'
+    git 'https://github.com/mhristof/fluffy-fiesta'
+    sh 'ls'
+    sh 'cat README.md'
+       }
+   }
+   stage('branch')
+   {
+       sh""" git checkout thomas
+       ls
+       cat NewFileName.txt"""
+   }
+   stage('new branch')
+   {
+      sh 'git checkout master'  
+      echo "you are in master branch"
+      sh 'git checkout tarun-jenkins'
+      echo "you are in your branch" 
+   }
+   stage ('writing')
+   {
+     sh """
+     mkdir mybranch
+     cd mybranch
+     touch jenkins.txt  
+     date > jenkins.txt
+     cat jenkins.txt
+     """
+   }
+ }
+} 
+       git 'https://github.com/mhristof/fluffy-fiesta'
+      
+   }
+   stage('display'){
+       sh 'ls'
+       sh 'cat README.md'
+    }
+    stage('display2'){
+        git show
+        git branch thomas
+        sh 'ls'`
+    }
+}
