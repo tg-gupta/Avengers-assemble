@@ -1,7 +1,7 @@
 # calling variables from samyak
 variable "story"{ 
     type = string
-    value = "\n I am inevitable, I am Iron Man \n"
+    default = "\n I am inevitable, I am Iron Man \n"
 
 }
 module "avengers"{
