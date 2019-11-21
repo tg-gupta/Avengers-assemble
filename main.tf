@@ -9,5 +9,5 @@ module "avengers"{
 }
 
 output "story_new" {
-  value = "${var.story} ${module.avengers.samyak_msg} "
+  value = "${module.avengers.samyak_msg} ${var.story} "
 }
