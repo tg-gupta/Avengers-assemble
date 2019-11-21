@@ -11,3 +11,5 @@ module "avengers"{
 output "story_new" {
   value = "${module.avengers.samyak_msg} ${var.story} "
 }
+
+#for checking tags
